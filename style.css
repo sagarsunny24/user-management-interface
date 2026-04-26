@@ -108,6 +108,9 @@ tbody tr {
 tbody tr:hover{
   background: #f3f4f6;
 }
+.td-actions {
+  text-align: right;
+}
 button {
   cursor: pointer;
 }
@@ -210,6 +213,9 @@ input {
   border-radius: 8px;
   outline: none;
   transition: 0.2s;
+}
+input.is-error {
+  border-color: #ef4444;
 }
 input:focus {
   border-color:#2563eb ;
