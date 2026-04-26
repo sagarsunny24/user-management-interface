@@ -114,6 +114,7 @@ function renderUsers() {
   if (users.length == 0){
     emptyState.style.display="block"
     tableWrap.classList.remove("is-visible")
+    UpdateCount()
     return
   }
 
@@ -131,7 +132,7 @@ function renderUsers() {
         <button class="btn-remove" data-id="${user.id}">Remove</button>
       </td>
     </tr>`).join("");
-    UpdateCount()
+  UpdateCount()
 }
 
 
