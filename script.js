@@ -6,7 +6,7 @@ let userToRemove = null
 const addBtn = document.querySelector("#btn-addnew")
 const formOverlay = document.getElementById('formOverlay')
 const btnClose = document.querySelector('.btn-close')
-const btnCancel = document.querySelector('.btn-cancel')
+const btnCancel = document.getElementById("btnCancel")
 const tableBody = document.getElementById("tableBody")
 const emptyState = document.getElementById('emptyState')
 const tableWrap = document.getElementById('table-wrap')
@@ -114,7 +114,6 @@ function renderUsers() {
   if (users.length == 0){
     emptyState.style.display="block"
     tableWrap.classList.remove("is-visible")
-    userCount.textContent = "0 users"
     return
   }
 
@@ -144,6 +143,7 @@ function openFormModal() {
   btnSubmit.textContent = "Save User"
   userForm.reset()
   formOverlay.classList.add('is-open');
+  firstNameInp.focus()
 
 }
 
