@@ -1,94 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>User Management</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <header>
-            <div class="header-left">
-                <div class="admin-text">Admin Panel</div>
-                <h1 class="user-text">Users</h1>
-            </div>
-            <div class="header-right">
-                <button class="addnew" id="btn-addnew">
-                <span class="addbtn">+</span>Add User</button>
-                <span class="userCount" id="userCount">0 users</span>
-            </div>
-        </header>
+      <header>
+        <div class="header-left">
+          <div class="admin-text">Admin Panel</div>
+          <h1 class="user-text">Users</h1>
+        </div>
+        <div class="header-right">
+          <button class="addnew" id="btn-addnew">
+            <span class="addbtn">+</span>Add User
+          </button>
+          <span class="userCount" id="userCount">0 users</span>
+        </div>
+      </header>
 
-        <main>
-            <div class="emptyState" id="emptyState">
-                <h2>No users yet</h2>
-                <p>Click + Add User to get started</p>
-            </div>
-            <div class="table-wrap" id="table-wrap">
-                <table aria-label="User-List">
-                    <thead>
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Mobile</th>
-                            <th scope="col"> Actions</th>
-                        </tr>
-                        </thead>
-                    <tbody id="tableBody"></tbody>
-                </table>
-            </div>
-        </main>
+      <main>
+        <div class="emptyState" id="emptyState">
+          <h2>No users yet</h2>
+          <p>Click + Add User to get started</p>
+        </div>
+        <div class="table-wrap" id="table-wrap">
+          <table aria-label="User-List">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </main>
     </div>
     <div class="overlay" id="formOverlay">
-        <div class="modal" id="formModal">
-            <div class="modal-header">
-                <div class="form-header">
-                    <div class="newRecord-text" id="modalEyebrow">New Record</div>
-                    <h2 id="modalTitle">Add User</h2>
-                </div>
-                <button class="btn-close" id="btn-close">x</button>
-            </div>
-            <form id="userForm" novalidate>
-                <div class="form-grid">
-                    <div class="field">
-                        <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" placeholder="Sagar" autocomplete="given-name" required>
-                        <span class="field-error" id="firstNameErr"></span>
-                    </div>
-                    <div class="field">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" placeholder="Sunny" autocomplete="family-name" required>
-                        <span class="field-error" id="lastNameErr"></span>
-                    </div>
-                    <div class="field full">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="sagarsunny@gmail.com" required>
-                        <span class="field-error" id="emailerr"></span>
-                    </div>
-                    <div class="field full">
-                        <label for="mobile">Mobile Number</label>
-                        <input type="tel" id="mobile" name="mobile" placeholder="9876543210" required>
-                        <span class="field-error" id="mobileErr"></span>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn-cancel" id="btnCancel">Cancel</button>
-                    <button type="submit" class="btn-submit" id="btnSubmit">Submit</button>
-                </div>
-            </form>
+      <div class="modal" id="formModal">
+        <div class="modal-header">
+          <div class="form-header">
+            <div class="newRecord-text" id="modalEyebrow">New Record</div>
+            <h2 id="modalTitle">Add User</h2>
+          </div>
+          <button class="btn-close" id="btn-close">x</button>
         </div>
+        <form id="userForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                placeholder="Sagar"
+                autocomplete="given-name"
+                required
+              />
+              <span class="field-error" id="firstNameErr"></span>
+            </div>
+            <div class="field">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                placeholder="Sunny"
+                autocomplete="family-name"
+                required
+              />
+              <span class="field-error" id="lastNameErr"></span>
+            </div>
+            <div class="field full">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="sagarsunny@gmail.com"
+                required
+              />
+              <span class="field-error" id="emailerr"></span>
+            </div>
+            <div class="field full">
+              <label for="mobile">Mobile Number</label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                placeholder="9876543210"
+                required
+              />
+              <span class="field-error" id="mobileErr"></span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-cancel" id="btnCancel">
+              Cancel
+            </button>
+            <button type="submit" class="btn-submit" id="btnSubmit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="overlay" id="confirmOverlay">
-        <div class="confirm-box">
-            <h3 id="confirmtitle">Remove User?</h3>
-            <p class="confirmMsg">This action is permanent and cannot be undone</p>
-            <div class="confirm-actions">
-                <button class="btn-cancel" id="btnConfirmCancel">Cancel</button>
-                <button class="btn-confirm-remove" id="btnConfirmRemove">Remove</button>
-            </div>
+      <div class="confirm-box">
+        <h3 id="confirmtitle">Remove User?</h3>
+        <p class="confirmMsg">This action is permanent and cannot be undone</p>
+        <div class="confirm-actions">
+          <button class="btn-cancel" id="btnConfirmCancel">Cancel</button>
+          <button class="btn-confirm-remove" id="btnConfirmRemove">
+            Remove
+          </button>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
