@@ -1,4 +1,6 @@
 # User Management Interface
+A responsive Todo App built with HTML, CSS, and Vanilla JavaScript that allows users to add, edit, delete, and manage tasks efficiently.
+The application uses Local Storage for persistent task management and dynamically categorizes tasks as ongoing, pending, or completed based on deadlines and completion status.
 
 A responsive user management interface built with vanilla HTML, CSS and JavaScript
 
